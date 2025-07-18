@@ -69,7 +69,7 @@
 
     <div id="welcome-page" class="min-h-screen flex items-center justify-center p-4">
         <div class="max-w-lg w-full bg-white p-8 rounded-xl shadow-lg text-center">
-            <h1 class="text-3xl font-bold brand-text-red mb-2">領導行為分析 </h1>
+            <h1 class="text-3xl font-bold brand-text-red mb-2">領導行為分析</h1>
             <p class="text-lg text-gray-600 mb-6">自我評量問卷</p>
             <div class="space-y-4 text-left">
                 <div>
@@ -94,7 +94,7 @@
 
     <div id="questionnaire-page" class="hidden container mx-auto p-4 sm:p-6 md:p-8">
         <header class="text-center mb-8">
-            <h1 class="text-3xl sm:text-4xl font-bold brand-text-red">領導行為分析 </h1>
+            <h1 class="text-3xl sm:text-4xl font-bold brand-text-red">領導行為分析</h1>
             <p class="text-md sm:text-lg text-gray-600 mt-2">自我評量問卷</p>
         </header>
         <div id="questionnaire" class="space-y-6"></div>
@@ -106,7 +106,6 @@
     </div>
 
     <div id="results-page" class="hidden container mx-auto p-4 sm:p-6 md:p-8">
-        <!-- Part 1: Score Results -->
         <div class="max-w-3xl mx-auto">
             <header class="text-center mb-8">
                 <h1 class="text-3xl sm:text-4xl font-bold brand-text-red">您的領導力分析結果</h1>
@@ -125,7 +124,18 @@
                         <p class="text-4xl font-bold brand-text-red" id="effectivenessScoreText">0%</p>
                     </div>
                 </div>
-                <div id="interpretation-section" class="mt-4 border-t pt-6">
+
+                <div id="score-details-section" class="mt-8 border-t pt-6">
+                    <h2 class="text-2xl font-bold text-center mb-6" style="color: var(--brand-black);">計分明細</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div id="flex-details" class="bg-gray-50 p-4 rounded-lg">
+                            </div>
+                        <div id="effect-details" class="bg-gray-50 p-4 rounded-lg">
+                            </div>
+                    </div>
+                </div>
+
+                <div id="interpretation-section" class="mt-8 border-t pt-6">
                      <h2 class="text-2xl font-bold text-center mb-6" style="color: var(--brand-black);">詳細解讀</h2>
                      <div class="space-y-6">
                         <div id="flex-interpretation"></div>
@@ -135,15 +145,12 @@
             </div>
         </div>
 
-        <!-- Part 2: Answered Questions -->
         <div id="answered-questions-section" class="max-w-3xl mx-auto mt-12">
             <h2 class="text-3xl sm:text-4xl font-bold brand-text-red text-center mb-8 border-t pt-8">問卷回答記錄</h2>
             <div id="answered-questions-container" class="space-y-6">
-                <!-- Answered questions will be injected here -->
-            </div>
+                </div>
         </div>
 
-        <!-- Action Buttons -->
         <div class="text-center mt-12">
              <button id="retakeBtn" class="btn bg-gray-700 text-white hover:bg-gray-800">重新測驗</button>
         </div>
@@ -196,7 +203,7 @@
         { id: 16, text: "由於家中有人生病，您被迫錯過了兩次由您指導的委員會會議。在參加下一次會議時，您發現委員會運作良好，並在完成其目標方面取得了進展。所有小組成員都準備充分，積極參與，並對他們的進展充滿熱情。您不確定自己的角色應該是什麼。您會...", options: { A: "感謝委員會成員迄今為止的工作。讓小組繼續像過去兩次會議那樣運作。", B: "感謝委員會成員迄今為止的工作。設定下次會議的議程。開始指導小組的活動。", C: "感謝委員會成員迄今為止的工作。嘗試徵求替代的想法和建議。盡您所能讓成員感到重要和參與。", D: "感謝委員會成員迄今為止的工作。設定下次會議的議程，但要確保徵求他們的想法和建議。" } },
         { id: 17, text: "您的員工非常有能力，並且能很好地獨立工作。由於最近的成功，他們的熱情很高。他們作為一個團隊的表現非常出色。現在，您必須為來年設定單位目標。在一次小組會議上，您會...", options: { A: "讚揚他們去年的成果。讓小組參與來年的問題解決和目標設定。鼓勵他們發揮創意並幫助他們探索替代方案。", B: "讚揚他們去年的成果。通過設定來年的目標來挑戰他們。概述達成這些目標所需的行動步驟。", C: "讚揚他們去年的成果。要求他們設定來年的目標，並定義他們達成這些目標的行動計畫。在被要求時隨時準備做出貢-獻。", D: "讚揚他們去年的成果。設定來年的目標，並概述達成這些目標所需的行動步驟。徵求小組的意見和建議，並在可能的情況下納入。" } },
         { id: 18, text: "您和您的經理都知道，您的部門需要一套新的工作程序來提高長期績效。部門成員渴望做出一些改變；但由於他們職能的專業化，他們缺乏理解「大局」的知識和技能。您會...", options: { A: "概述新程序和您的實施計畫。讓小組參與討論替代方案。在可能的情況下使用他們的建議，但要讓他們遵循您的大致方法。頻繁檢查新程序的使用情況並監控其結果。", B: "概述並示範新程序。指導小組初步使用程序，並密切監控結果。", C: "讓小組參與討論以探索新的工作程序。鼓勵他們在開發新程序中的主動性和創造力。幫助他們檢視可能的替代方案。定期檢查新程序的使用情況並監控他們的績效。", D: "要求小組制定並實施一套新的程序。回答任何資訊方面的問題，但將任務的責任交給部門成員。定期監控他們的績效。" } },
-        { id: 19, text: "您最近被任命為您部門的主管。上任以來，您注意到績效下降。技術發生了變化，您的員工尚未掌握新的技能和技巧。最糟糕的是，他們似乎沒有動力去學習這些技能。在一次小組會議上，您會...", options: { A: "討論員工績效下降的問題。聽取他們的擔憂。徵求他們提高績效的解決方案。表達您對他們策略的信心。強調他們過去的努力，但在他們執行策略時定期檢查績效。", B: "概述您希望他們採取的必要糾正措施。探索替代方案並納入他們的想法。如果適當，修改計畫，但要確保他們實施。頻繁檢查他們的績效。", C: "告訴他們績效下降的情況。要求他們分析問題並起草一套行動步驟供您批准。為計畫設定一個截止日期。追蹤他們的績效。", D: "概述並指導您希望他們採取的必要糾正措施。定義角色、責任和標準。密切監控他們的績效以求改進。" } },
+        { id: 19, text: "您最近被任命為您部門的主管。上任以來，您注意到績效下降。技術發生了變化，您的員工尚未掌握新的技能和技巧。最糟糕的是，他們似乎沒有動力去學習這些技能。在一次小組會議上，您会...", options: { A: "討論員工績效下降的問題。聽取他們的擔憂。徵求他們提高績效的解決方案。表達您對他們策略的信心。強調他們過去的努力，但在他們執行策略時定期檢查績效。", B: "概述您希望他們採取的必要糾正措施。探索替代方案並納入他們的想法。如果適當，修改計畫，但要確保他們實施。頻繁檢查他們的績效。", C: "告訴他們績效下降的情況。要求他們分析問題並起草一套行動步驟供您批准。為計畫設定一個截止日期。追蹤他們的績效。", D: "概述並指導您希望他們採取的必要糾正措施。定義角色、責任和標準。密切監控他們的績效以求改進。" } },
         { id: 20, text: "您注意到您的一位沒有經驗的員工沒有正確完成某些報告。這些報告不準確且不完整。她對這項任務不熱心，並常常認為文書工作是浪費時間。您會...", options: { A: "讓她知道她提交的報告不準確和不完整。討論她應採取的步驟，並闡明為什麼這些步驟很重要。徵求她的建議，但要確保她遵循您的大致框架。頻繁檢查她的文書工作。", B: "讓她知道她提交的報告不準確和不完整。要求她提出一個計畫來提高其品質。給她更多時間來妥善完成工作。檢查她的文書工作。", C: "讓她知道她提交的報告不準確和不完整。問她打算怎麼辦。幫助她制定一個解決問題的計畫。定期檢查她的文書工作。", D: "讓她知道她提交的報告不準確和不完整。向她展示如何完成報告。具體說明她為提高品質應採取的步驟。密切監控她的文書工作。" } }
     ];
 
@@ -234,6 +241,17 @@
 
 
     document.addEventListener('DOMContentLoaded', () => {
+        // --- START: 新增的程式碼 ---
+        // 函式：用於從 URL 取得查詢參數
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // 取得從 SharePoint 傳來的 userEmail
+        const userEmail = getQueryParam('userEmail') || 'N/A'; // 如果沒取到，給定預設值
+        // --- END: 新增的程式碼 ---
+
         // App State
         let reportData = null; 
 
@@ -319,10 +337,38 @@
             employeeInfoDisplay.innerHTML = `
                 <p class="text-md"><span class="font-semibold">員工編號:</span> ${employeeId}</p>
                 <p class="text-md"><span class="font-semibold">員工姓名:</span> ${employeeName}</p>
+                <!-- 顯示 SharePoint 使用者 Email -->
+                <p class="text-md"><span class="font-semibold">提交者Email:</span> ${userEmail}</p>
             `;
             document.getElementById('flexibilityScoreText').textContent = `${results.flexibilityPercent}%`;
             document.getElementById('effectivenessScoreText').textContent = `${results.effectivenessPercent}%`;
             
+            // Render score details
+            const flexDetailsContainer = document.getElementById('flex-details');
+            if (results.styleCounts) {
+                flexDetailsContainer.innerHTML = `
+                    <h4 class="font-semibold text-lg brand-text-green mb-3">彈性分數明細</h4>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li class="flex justify-between items-center"><span>風格1 (S1):</span> <span class="font-bold text-base">${results.styleCounts.S1} 次</span></li>
+                        <li class="flex justify-between items-center"><span>風格2 (S2):</span> <span class="font-bold text-base">${results.styleCounts.S2} 次</span></li>
+                        <li class="flex justify-between items-center"><span>風格3 (S3):</span> <span class="font-bold text-base">${results.styleCounts.S3} 次</span></li>
+                        <li class="flex justify-between items-center"><span>風格4 (S4):</span> <span class="font-bold text-base">${results.styleCounts.S4} 次</span></li>
+                    </ul>
+                `;
+            }
+
+            const effectDetailsContainer = document.getElementById('effect-details');
+            if (results.effectivenessCategoryCounts) {
+                effectDetailsContainer.innerHTML = `
+                    <h4 class="font-semibold text-lg brand-text-red mb-3">效能分數明細</h4>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li class="flex justify-between items-center"><span>最好 (4分):</span> <span class="font-bold text-base">${results.effectivenessCategoryCounts.best} 次</span></li>
+                        <li class="flex justify-between items-center"><span>良好 (3分):</span> <span class="font-bold text-base">${results.effectivenessCategoryCounts.good} 次</span></li>
+                        <li class="flex justify-between items-center"><span>尚可/不佳 (1分):</span> <span class="font-bold text-base">${results.effectivenessCategoryCounts.fair_poor} 次</span></li>
+                    </ul>
+                `;
+            }
+
             drawChart(results.flexibilityPercent, results.effectivenessPercent);
             renderInterpretation(results.flexibilityRawScore, results.effectivenessRawScore);
 
@@ -351,7 +397,7 @@
             submitAndCalculateBtn.disabled = true;
             submitAndCalculateBtn.textContent = '正在提交...';
 
-            // Calculate scores first
+            // Calculate Flexibility scores and details
             const styleCounts = { S1: 0, S2: 0, S3: 0, S4: 0 };
             flexibilityMapping.forEach((mapping, i) => {
                 const answer = answers[i + 1];
@@ -362,22 +408,35 @@
             const flexibilityRawScore = 30 - subtotal;
             const flexibilityPercent = Math.round((flexibilityRawScore / 30) * 100);
 
+            // Calculate Effectiveness scores and details
             let effectivenessRawScore = 0;
+            const effectivenessCategoryCounts = { best: 0, good: 0, fair_poor: 0 };
+            const effectivenessLabels = { 4: 'best', 3: 'good', 1: 'fair_poor' };
+
             effectivenessMapping.forEach((mapping, i) => {
                 const answer = answers[i + 1];
-                effectivenessRawScore += mapping[answer];
+                const score = mapping[answer];
+                effectivenessRawScore += score;
+                const category = effectivenessLabels[score];
+                if (category) {
+                    effectivenessCategoryCounts[category]++;
+                }
             });
             const effectivenessPercent = Math.round(((effectivenessRawScore - 20) / 60) * 100);
             
+            // --- START: 修改的程式碼 ---
+            // 建立要傳送的資料物件，並加入 userEmail
             const submissionData = {
                 EmployeeID: employeeIdInput.value.trim(),
                 EmployeeName: employeeNameInput.value.trim(),
+                UserEmail: userEmail, // 將取得的 Email 加入
                 FlexibilityScore: flexibilityPercent,
                 EffectivenessScore: effectivenessPercent,
                 FlexibilityRaw: flexibilityRawScore,
                 EffectivenessRaw: effectivenessRawScore,
                 AnswersJSON: JSON.stringify(answers)
             };
+            // --- END: 修改的程式碼 ---
 
             // Try to save to Google Sheets
             const success = await saveToGoogleSheets(submissionData);
@@ -392,13 +451,14 @@
                         flexibilityPercent, 
                         effectivenessPercent, 
                         flexibilityRawScore, 
-                        effectivenessRawScore 
+                        effectivenessRawScore,
+                        styleCounts: styleCounts,
+                        effectivenessCategoryCounts: effectivenessCategoryCounts
                     }
                 };
                 renderResultsPage(reportData);
             } else {
                 // Submission failed, button is re-enabled in saveToGoogleSheets
-                // User stays on the questionnaire page
             }
         }
         
@@ -425,7 +485,7 @@
                 if (response.ok) {
                      const result = await response.json();
                      if (result.result === 'success') {
-                        return true; // Indicate success
+                        return true;
                      } else {
                         throw new Error(result.message || 'Script returned an unknown error.');
                      }
@@ -438,7 +498,7 @@
                 showAlert('提交失敗', `無法將結果儲存到資料庫: ${error.message}. 請檢查您的網路連線或聯絡管理員。`);
                 submitAndCalculateBtn.disabled = false;
                 submitAndCalculateBtn.textContent = '提交並查看結果';
-                return false; // Indicate failure
+                return false;
             }
         }
 
@@ -455,9 +515,10 @@
             };
             const flexData = getFlexInterpretation(flexRaw);
             const effectData = getEffectInterpretation(effectRaw);
-            document.getElementById('flex-interpretation').innerHTML = `<div class="bg-gray-50 p-4 rounded-lg"><h4 class="font-semibold text-lg brand-text-green mb-2">領導風格彈性 (${flexRaw}/30)</h4><p class="text-md font-medium ${flexData.color} mb-2">您的水平: ${flexData.level}</p><p class="text-sm text-gray-700">${flexData.desc}</p></div>`;
-            document.getElementById('effect-interpretation').innerHTML = `<div class="bg-gray-50 p-4 rounded-lg"><h4 class="font-semibold text-lg brand-text-red mb-2">領導風格效能 (${effectRaw}/80)</h4><p class="text-md font-medium ${effectData.color} mb-2">您的水平: ${effectData.level}</p><p class="text-sm text-gray-700">${effectData.desc} 要獲得高效能分數，您不僅需要展現高度的彈性，還必須為特定情境選擇最恰當的領導風格。</p></div>`;
+            document.getElementById('flex-interpretation').innerHTML = `<div class="bg-gray-50 p-4 rounded-lg"><h4 class="font-semibold text-lg brand-text-green mb-2">領導風格彈性</h4><p class="text-md font-medium ${flexData.color} mb-2">您的水平: ${flexData.level}</p><p class="text-sm text-gray-700">${flexData.desc}</p></div>`;
+            document.getElementById('effect-interpretation').innerHTML = `<div class="bg-gray-50 p-4 rounded-lg"><h4 class="font-semibold text-lg brand-text-red mb-2">領導風格效能</h4><p class="text-md font-medium ${effectData.color} mb-2">您的水平: ${effectData.level}</p><p class="text-sm text-gray-700">${effectData.desc} 要獲得高效能分數，您不僅需要展現高度的彈性，還必須為特定情境選擇最恰當的領導風格。</p></div>`;
         }
+
         function drawChart(flexPercent, effectPercent) {
             const container = document.getElementById('score-chart-container');
             container.innerHTML = '';
@@ -556,6 +617,8 @@
             employeeInfoDisplay.innerHTML = '';
             document.getElementById('score-chart-container').innerHTML = '';
             document.getElementById('answered-questions-container').innerHTML = '';
+            document.getElementById('flex-details').innerHTML = '';
+            document.getElementById('effect-details').innerHTML = '';
             document.getElementById('flex-interpretation').innerHTML = '';
             document.getElementById('effect-interpretation').innerHTML = '';
             document.getElementById('flexibilityScoreText').textContent = '0%';
